@@ -2,10 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  margin: 0;
+:root {
+    --gradient-main-color: linear-gradient(-45deg, #3c4b9b, #384ba1, #2D3770FF, #313f8a) no-repeat;
+    --main-darker-color: #22294FFF;
+    --main-middle-color: #34417a;
+    --main-lighter-color: #455aa6;
+    --switch-main-color-active: #ffffff;
+    --switch-main-color-disabled: #424242;
+
+    /* Font Variables */
+    --font-main: 'Roboto';
+    --font-size-base: 2vmin;
+    --font-size-small: 1.5vmin;
+    --font-size-large: 3vmin;
+    --font-size-huge: 4vmin;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+    --font-weight-light: 300;
+
+    --small-screen-width: 550px;
+    --main-box-shadow: #5e5c5c 3px 3px 5px 0
 }
 
-.user-card button {
-  margin-top: 10px;
+body {
+    background: var(--gradient-main-color);
+    font-size: var(--font-size-base);
+    font-family: var(--font-main), sans-serif;
+    color: white;
+}
+
+
+@media (max-width: var(--small-screen-width)) {
+    /*
+     Find the user-card class in the corresponding UserCard.css for more details.
+     */
+    .user-card {
+        width: 80vw;
+    }
 }
