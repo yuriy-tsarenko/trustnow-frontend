@@ -29,7 +29,7 @@ export const UserCard: FunctionComponent<UserCardProps> = (props: UserCardProps)
         ? "active"
         : "disabled";
     return (
-        <div className="user-card p-4 border rounded">
+        <div data-testid={"user-card-layout"} className="user-card p-4 border rounded">
             <div className="info-bar inline-flex gap-5 justify-items-start">
                 <Avatar className="user-avatar" alt={displayName} src="UserAvatar"/>
                 <div className="user-info">

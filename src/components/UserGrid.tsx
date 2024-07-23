@@ -7,7 +7,7 @@ import {mockUsers} from "../common/Constants";
 export const UserGrid: FunctionComponent<any> = () => {
     const [users, setUsers] = useState(mockUsers);
     return (
-        <div className="user-grid">
+        <div data-testid={"grid-layout"} className="user-grid">
             {users.map((user: User) => (
                 <UserCard key={user.id} user={user}/>
             ))}
