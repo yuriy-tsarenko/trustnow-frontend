@@ -1,6 +1,6 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = function override(config, env) {
-    config.resolve.alias['@media'] = path.resolve(__dirname, 'src/media/icons');
+    config.resolve.alias["@media"] = path.resolve(__dirname, "src/media");
     return config;
 };

@@ -1,0 +1,35 @@
+.user-card {
+    background-color: var(--main-lighter-color);
+    box-shadow: var(--main-box-shadow);
+}
+
+.display-email {
+    font-size: var(--font-size-base);
+    color: #cbcbcb;
+    overflow-x: hidden;
+}
+
+.display-name {
+    font-size: var(--font-size-large);
+}
+
+.card-icon {
+    color: white;
+    cursor: pointer
+}
+
+.info-bar {
+    position: relative;
+    width: 100%
+}
+
+.action-bar {
+    position: relative;
+    width: 100%
+}
+
+.user-avatar {
+    width: 55px;
+    height: 55px;
+}
+

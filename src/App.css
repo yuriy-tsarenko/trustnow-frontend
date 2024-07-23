@@ -1,24 +1,32 @@
-.app {
-  font-family: Arial, sans-serif;
-  margin: 20px;
+.app-header {
+    background: var(--main-darker-color);
+    min-height: 7vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 2px;
 }
 
-.user-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+.app-main {
+    min-height: 95vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: start;
+    justify-content: center;
 }
 
-.user-card {
-  border: 1px solid #ccc;
-  padding: 10px;
-  width: 200px;
-}
-
-.user-card h3 {
-  margin: 0;
-}
-
-.user-card button {
-  margin-top: 10px;
+.app-footer {
+    background: var(--main-darker-color);
+    min-height: 10vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: calc(10px + 2vmin);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 2px;
 }
