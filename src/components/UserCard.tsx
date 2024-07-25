@@ -6,7 +6,9 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import "./UserCard.css";
 
 interface UserCardProps {
-    user: User;
+    user: User,
+    index: number,
+    onDelete: (userId: string, index: number) => void
 }
 
 export const UserCard: FunctionComponent<UserCardProps> = (props: UserCardProps) => {
@@ -46,7 +48,7 @@ export const UserCard: FunctionComponent<UserCardProps> = (props: UserCardProps)
                               onClick={() => handleEditUser()}
                 />
                 <DeleteIcon className={"card-icon"}
-                            onClick={() => handleEditUser()}
+                            onClick={() => props.onDelete(props.user.id, props.index)}
                 />
             </div>
         </div>
