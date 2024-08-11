@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const AxiosAPI = axios.create({
+export const axiosInstance = axios.create({
     baseURL: "http://localhost:8080",
     headers: {
         "Accept": "application/json",
