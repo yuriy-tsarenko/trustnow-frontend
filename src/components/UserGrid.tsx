@@ -14,7 +14,7 @@ export const UserGrid: FunctionComponent<any> = () => {
     const authToken: string = "DUMMY_VALUE";
 
     useEffect(() => {
-        dispatch(fetchAllUsers({authToken}));
+        fetchAllUsers({authToken});
     }, [dispatch]);
 
     const handleDeleteUser = (userId: string, index: number) => {

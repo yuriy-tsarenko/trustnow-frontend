@@ -83,15 +83,14 @@ export class RestClient<T> {
     private constructUrl(endpoint: string,
                          pathVariables: string[] | number[] ,
                          queryParams: UrlParameter[]): string {
-        let constructedUrl = endpoint;
         pathVariables.forEach((variable) => {
-            constructedUrl = constructedUrl.replace(/{\w+}/, variable.toString());
+            endpoint = endpoint.replace(/{\w+}/, variable.toString());
         });
-        return this.addQueryParams(constructedUrl, queryParams);
+        return this.addQueryParams(endpoint, queryParams);
     }
 
     private addQueryParams(url: string, parameters: UrlParameter[]): string {
-        if (typeof parameters !== "undefined") {
+        if (typeof parameters !== "undefined" && parameters.length > 0) {
             for (let index = 0; index < parameters.length; index++) {
                 const urlParameter = parameters[index];
                 const paramName = urlParameter.paramName;

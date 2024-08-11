@@ -1,7 +1,7 @@
 import {createAsyncThunk, createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {User} from "../common/types/User";
 import {RestClient} from "../common/api/RestClient";
-import {AxiosAPI} from "../common/api/Axios";
+import {axiosInstance} from "../common/api/Axios";
 
 interface UsersState {
     users: User[];
@@ -11,7 +11,7 @@ const initialState: UsersState = {
     users: [],
 };
 
-const restClient: RestClient<User> = new RestClient<User>(AxiosAPI);
+const restClient: RestClient<User> = new RestClient<User>(axiosInstance);
 
 export const fetchAllUsers = createAsyncThunk(
     "users/fetchAll",
